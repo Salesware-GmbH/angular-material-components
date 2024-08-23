@@ -227,7 +227,6 @@
       "skipTests": true
     },
     "@schematics/angular:pipe": {
-      "prefix": "ngx-mat",
       "skipTests": true
     },
     "@schematics/angular:service": {
