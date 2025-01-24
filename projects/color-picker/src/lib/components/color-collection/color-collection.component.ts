@@ -3,13 +3,14 @@ import { Color } from '../../models';
 import { BASIC_COLORS, stringInputToObject } from '../../helpers';
 
 @Component({
-  selector: 'ngx-mat-color-collection',
-  templateUrl: './color-collection.component.html',
-  styleUrls: ['./color-collection.component.scss'],
-  encapsulation: ViewEncapsulation.None,
-  host: {
-    'class': 'ngx-mat-color-collection'
-  }
+    selector: 'ngx-mat-color-collection',
+    templateUrl: './color-collection.component.html',
+    styleUrls: ['./color-collection.component.scss'],
+    encapsulation: ViewEncapsulation.None,
+    host: {
+        'class': 'ngx-mat-color-collection'
+    },
+    standalone: false
 })
 export class NgxMatColorCollectionComponent implements OnInit {
 

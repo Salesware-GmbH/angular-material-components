@@ -3,9 +3,10 @@ import { FormControl } from '@angular/forms';
 import { ThemePalette } from '@angular/material/core';
 
 @Component({
-  selector: 'app-demo-datetime',
-  templateUrl: './demo-datetime.component.html',
-  styleUrls: ['./demo-datetime.component.scss']
+    selector: 'app-demo-datetime',
+    templateUrl: './demo-datetime.component.html',
+    styleUrls: ['./demo-datetime.component.scss'],
+    standalone: false
 })
 export class DemoDatetimeComponent implements OnInit {
 

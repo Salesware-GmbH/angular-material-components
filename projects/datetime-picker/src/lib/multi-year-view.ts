@@ -45,11 +45,12 @@ export const yearsPerRow = 4;
  * @docs-private
  */
 @Component({
-  selector: 'ngx-mat-multi-year-view',
-  templateUrl: 'multi-year-view.html',
-  exportAs: 'ngxMatMultiYearView',
-  encapsulation: ViewEncapsulation.None,
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'ngx-mat-multi-year-view',
+    templateUrl: 'multi-year-view.html',
+    exportAs: 'ngxMatMultiYearView',
+    encapsulation: ViewEncapsulation.None,
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: false
 })
 export class NgxMatMultiYearView<D> implements AfterContentInit, OnDestroy {
   private _rerenderSubscription = Subscription.EMPTY;

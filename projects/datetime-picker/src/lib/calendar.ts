@@ -44,11 +44,12 @@ export type NgxMatCalendarView = 'month' | 'year' | 'multi-year';
 
 /** Default header for MatCalendar */
 @Component({
-  selector: 'ngx-mat-calendar-header',
-  templateUrl: 'calendar-header.html',
-  exportAs: 'ngxMatCalendarHeader',
-  encapsulation: ViewEncapsulation.None,
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'ngx-mat-calendar-header',
+    templateUrl: 'calendar-header.html',
+    exportAs: 'ngxMatCalendarHeader',
+    encapsulation: ViewEncapsulation.None,
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: false
 })
 export class NgxMatCalendarHeader<D> {
   constructor(
@@ -217,16 +218,17 @@ export class NgxMatCalendarHeader<D> {
 
 /** A calendar that is used as part of the datepicker. */
 @Component({
-  selector: 'ngx-mat-calendar',
-  templateUrl: 'calendar.html',
-  styleUrls: ['calendar.scss'],
-  host: {
-    'class': 'mat-calendar',
-  },
-  exportAs: 'ngxMatCalendar',
-  encapsulation: ViewEncapsulation.None,
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  providers: [NGX_MAT_SINGLE_DATE_SELECTION_MODEL_PROVIDER],
+    selector: 'ngx-mat-calendar',
+    templateUrl: 'calendar.html',
+    styleUrls: ['calendar.scss'],
+    host: {
+        'class': 'mat-calendar',
+    },
+    exportAs: 'ngxMatCalendar',
+    encapsulation: ViewEncapsulation.None,
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    providers: [NGX_MAT_SINGLE_DATE_SELECTION_MODEL_PROVIDER],
+    standalone: false
 })
 export class NgxMatCalendar<D> implements AfterContentInit, AfterViewChecked, OnDestroy, OnChanges {
   /** An input indicating the type of the header component, if set. */

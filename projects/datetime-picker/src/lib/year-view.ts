@@ -46,11 +46,12 @@ import { NGX_MAT_DATE_FORMATS, NgxMatDateFormats } from './core/date-formats';
  * @docs-private
  */
 @Component({
-  selector: 'ngx-mat-year-view',
-  templateUrl: 'year-view.html',
-  exportAs: 'ngxMatYearView',
-  encapsulation: ViewEncapsulation.None,
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'ngx-mat-year-view',
+    templateUrl: 'year-view.html',
+    exportAs: 'ngxMatYearView',
+    encapsulation: ViewEncapsulation.None,
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: false
 })
 export class NgxMatYearView<D> implements AfterContentInit, OnDestroy {
   private _rerenderSubscription = Subscription.EMPTY;

@@ -25,22 +25,24 @@ const _NgxMatInputMixinBase = mixinErrorState(
 );
 
 @Directive({
-  selector: '[ngxMatFileInputIcon]'
+    selector: '[ngxMatFileInputIcon]',
+    standalone: false
 })
 export class NgxMatFileInputIcon { }
 
 @Component({
-  selector: 'ngx-mat-file-input',
-  templateUrl: 'file-input.component.html',
-  styleUrls: ['file-input.component.scss'],
-  encapsulation: ViewEncapsulation.None,
-  host: {
-    'class': 'ngx-mat-file-input'
-  },
-  providers: [
-    { provide: MatFormFieldControl, useExisting: forwardRef(() => NgxMatFileInputComponent) }
-  ],
-  exportAs: 'ngx-mat-file-input'
+    selector: 'ngx-mat-file-input',
+    templateUrl: 'file-input.component.html',
+    styleUrls: ['file-input.component.scss'],
+    encapsulation: ViewEncapsulation.None,
+    host: {
+        'class': 'ngx-mat-file-input'
+    },
+    providers: [
+        { provide: MatFormFieldControl, useExisting: forwardRef(() => NgxMatFileInputComponent) }
+    ],
+    exportAs: 'ngx-mat-file-input',
+    standalone: false
 })
 export class NgxMatFileInputComponent extends _NgxMatInputMixinBase implements MatFormFieldControl<FileOrArrayFile>,
   OnDestroy, DoCheck, CanUpdateErrorState, ControlValueAccessor {

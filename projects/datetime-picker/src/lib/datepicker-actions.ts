@@ -16,8 +16,9 @@ import {NgxMatDatepickerBase, NgxMatDatepickerControl} from './datepicker-base';
 
 /** Button that will close the datepicker and assign the current selection to the data model. */
 @Directive({
-  selector: '[ngxMatDatepickerApply], [ngxMatDateRangePickerApply]',
-  host: {'(click)': '_applySelection()'},
+    selector: '[ngxMatDatepickerApply], [ngxMatDateRangePickerApply]',
+    host: { '(click)': '_applySelection()' },
+    standalone: false
 })
 export class NgxMatDatepickerApply {
   constructor(private _datepicker: NgxMatDatepickerBase<NgxMatDatepickerControl<any>, unknown>) {}
@@ -30,8 +31,9 @@ export class NgxMatDatepickerApply {
 
 /** Button that will close the datepicker and discard the current selection. */
 @Directive({
-  selector: '[ngxMatDatepickerCancel], [ngxMatDateRangePickerCancel]',
-  host: {'(click)': '_datepicker.close()'},
+    selector: '[ngxMatDatepickerCancel], [ngxMatDateRangePickerCancel]',
+    host: { '(click)': '_datepicker.close()' },
+    standalone: false
 })
 export class NgxMatDatepickerCancel {
   constructor(public _datepicker: NgxMatDatepickerBase<NgxMatDatepickerControl<any>, unknown>) {}
@@ -42,17 +44,18 @@ export class NgxMatDatepickerCancel {
  * to the bottom of a datepicker or date range picker.
  */
 @Component({
-  selector: 'ngx-mat-datepicker-actions, ngx-mat-date-range-picker-actions',
-  styleUrls: ['datepicker-actions.scss'],
-  template: `
+    selector: 'ngx-mat-datepicker-actions, ngx-mat-date-range-picker-actions',
+    styleUrls: ['datepicker-actions.scss'],
+    template: `
     <ng-template>
       <div class="mat-datepicker-actions">
         <ng-content></ng-content>
       </div>
     </ng-template>
   `,
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  encapsulation: ViewEncapsulation.None,
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    encapsulation: ViewEncapsulation.None,
+    standalone: false
 })
 export class NgxMatDatepickerActions implements AfterViewInit, OnDestroy {
   @ViewChild(TemplateRef) _template: TemplateRef<unknown>;

@@ -50,15 +50,16 @@ export interface NgxMatCalendarUserEvent<D> {
 let calendarBodyId = 1;
 
 @Component({
-  selector: '[ngx-mat-calendar-body]',
-  templateUrl: 'calendar-body.html',
-  styleUrls: ['calendar-body.scss'],
-  host: {
-    'class': 'ngx-mat-calendar-body',
-  },
-  exportAs: 'matCalendarBody',
-  encapsulation: ViewEncapsulation.None,
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: '[ngx-mat-calendar-body]',
+    templateUrl: 'calendar-body.html',
+    styleUrls: ['calendar-body.scss'],
+    host: {
+        'class': 'ngx-mat-calendar-body',
+    },
+    exportAs: 'matCalendarBody',
+    encapsulation: ViewEncapsulation.None,
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: false
 })
 export class NgxMatCalendarBody<D = any> implements OnChanges, OnDestroy, AfterViewChecked {
   private _platform = inject(Platform);

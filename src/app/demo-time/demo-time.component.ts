@@ -2,9 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { ThemePalette } from '@angular/material/core';
 
 @Component({
-  selector: 'app-demo-time',
-  templateUrl: './demo-time.component.html',
-  styleUrls: ['./demo-time.component.scss']
+    selector: 'app-demo-time',
+    templateUrl: './demo-time.component.html',
+    styleUrls: ['./demo-time.component.scss'],
+    standalone: false
 })
 export class DemoTimeComponent implements OnInit {
 

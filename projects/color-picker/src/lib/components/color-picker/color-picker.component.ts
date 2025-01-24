@@ -39,22 +39,23 @@ const _MatColorpickerContentBase = mixinColor(
 
 
 @Component({
-  selector: 'ngx-mat-color-picker-content',
-  templateUrl: './color-picker-content.component.html',
-  styleUrls: ['color-picker-content.component.scss'],
-  host: {
-    'class': 'ngx-mat-colorpicker-content',
-    '[@transformPanel]': '"enter"',
-    '[class.ngx-mat-colorpicker-content-touch]': 'picker.touchUi',
-  },
-  animations: [
-    matDatepickerAnimations.transformPanel,
-    matDatepickerAnimations.fadeInCalendar,
-  ],
-  exportAs: 'ngxMatColorPickerContent',
-  encapsulation: ViewEncapsulation.None,
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  inputs: ['color']
+    selector: 'ngx-mat-color-picker-content',
+    templateUrl: './color-picker-content.component.html',
+    styleUrls: ['color-picker-content.component.scss'],
+    host: {
+        'class': 'ngx-mat-colorpicker-content',
+        '[@transformPanel]': '"enter"',
+        '[class.ngx-mat-colorpicker-content-touch]': 'picker.touchUi',
+    },
+    animations: [
+        matDatepickerAnimations.transformPanel,
+        matDatepickerAnimations.fadeInCalendar,
+    ],
+    exportAs: 'ngxMatColorPickerContent',
+    encapsulation: ViewEncapsulation.None,
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    inputs: ['color'],
+    standalone: false
 })
 export class NgxMatColorPickerContentComponent extends _MatColorpickerContentBase
   implements CanColor {
@@ -72,11 +73,12 @@ export class NgxMatColorPickerContentComponent extends _MatColorpickerContentBas
 }
 
 @Component({
-  selector: 'ngx-mat-color-picker',
-  template: '',
-  exportAs: 'ngxMatColorPicker',
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  encapsulation: ViewEncapsulation.None,
+    selector: 'ngx-mat-color-picker',
+    template: '',
+    exportAs: 'ngxMatColorPicker',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    encapsulation: ViewEncapsulation.None,
+    standalone: false
 })
 export class NgxMatColorPickerComponent implements OnInit, OnDestroy, CanColor {
 

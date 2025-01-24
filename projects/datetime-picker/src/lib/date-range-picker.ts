@@ -19,16 +19,17 @@ export interface NgxMatDateRangePickerInput<D> extends NgxMatDatepickerControl<D
 // directive if angular adds support for `exportAs: '$implicit'` on directives.
 /** Component responsible for managing the date range picker popup/dialog. */
 @Component({
-  selector: 'ngx-mat-date-range-picker',
-  template: '',
-  exportAs: 'ngxMatDateRangePicker',
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  encapsulation: ViewEncapsulation.None,
-  providers: [
-    NGX_MAT_RANGE_DATE_SELECTION_MODEL_PROVIDER,
-    NGX_MAT_CALENDAR_RANGE_STRATEGY_PROVIDER,
-    {provide: NgxMatDatepickerBase, useExisting: NgxMatDateRangePicker},
-  ],
+    selector: 'ngx-mat-date-range-picker',
+    template: '',
+    exportAs: 'ngxMatDateRangePicker',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    encapsulation: ViewEncapsulation.None,
+    providers: [
+        NGX_MAT_RANGE_DATE_SELECTION_MODEL_PROVIDER,
+        NGX_MAT_CALENDAR_RANGE_STRATEGY_PROVIDER,
+        { provide: NgxMatDatepickerBase, useExisting: NgxMatDateRangePicker },
+    ],
+    standalone: false
 })
 export class NgxMatDateRangePicker<D> extends NgxMatDatepickerBase<
   NgxMatDateRangePickerInput<D>,

@@ -36,28 +36,29 @@ import { NgxDateFilterFn, _NgxMatFormFieldPartial, dateInputsHaveChanged } from 
 let nextUniqueId = 0;
 
 @Component({
-  selector: 'ngx-mat-date-range-input',
-  templateUrl: 'date-range-input.html',
-  styleUrls: ['date-range-input.scss'],
-  exportAs: 'ngxMatDateRangeInput',
-  host: {
-    'class': 'mat-date-range-input',
-    '[class.mat-date-range-input-hide-placeholders]': '_shouldHidePlaceholders()',
-    '[class.mat-date-range-input-required]': 'required',
-    '[attr.id]': 'id',
-    'role': 'group',
-    '[attr.aria-labelledby]': '_getAriaLabelledby()',
-    '[attr.aria-describedby]': '_ariaDescribedBy',
-    // Used by the test harness to tie this input to its calendar. We can't depend on
-    // `aria-owns` for this, because it's only defined while the calendar is open.
-    '[attr.data-mat-calendar]': 'rangePicker ? rangePicker.id : null',
-  },
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  encapsulation: ViewEncapsulation.None,
-  providers: [
-    { provide: MatFormFieldControl, useExisting: NgxMatDateRangeInput },
-    { provide: NGX_MAT_DATE_RANGE_INPUT_PARENT, useExisting: NgxMatDateRangeInput },
-  ],
+    selector: 'ngx-mat-date-range-input',
+    templateUrl: 'date-range-input.html',
+    styleUrls: ['date-range-input.scss'],
+    exportAs: 'ngxMatDateRangeInput',
+    host: {
+        'class': 'mat-date-range-input',
+        '[class.mat-date-range-input-hide-placeholders]': '_shouldHidePlaceholders()',
+        '[class.mat-date-range-input-required]': 'required',
+        '[attr.id]': 'id',
+        'role': 'group',
+        '[attr.aria-labelledby]': '_getAriaLabelledby()',
+        '[attr.aria-describedby]': '_ariaDescribedBy',
+        // Used by the test harness to tie this input to its calendar. We can't depend on
+        // `aria-owns` for this, because it's only defined while the calendar is open.
+        '[attr.data-mat-calendar]': 'rangePicker ? rangePicker.id : null',
+    },
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    encapsulation: ViewEncapsulation.None,
+    providers: [
+        { provide: MatFormFieldControl, useExisting: NgxMatDateRangeInput },
+        { provide: NGX_MAT_DATE_RANGE_INPUT_PARENT, useExisting: NgxMatDateRangeInput },
+    ],
+    standalone: false
 })
 export class NgxMatDateRangeInput<D>
   implements

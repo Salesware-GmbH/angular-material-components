@@ -4,9 +4,10 @@ import { getColorAtPosition } from '../../../helpers';
 import { NgxMatBaseColorCanvas } from '../base-color-canvas';
 
 @Component({
-  selector: 'ngx-mat-color-slider',
-  templateUrl: './color-slider.component.html',
-  styleUrls: ['./color-slider.component.scss']
+    selector: 'ngx-mat-color-slider',
+    templateUrl: './color-slider.component.html',
+    styleUrls: ['./color-slider.component.scss'],
+    standalone: false
 })
 export class NgxMatColorSliderComponent extends NgxMatBaseColorCanvas implements OnInit {
 

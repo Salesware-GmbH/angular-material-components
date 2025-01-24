@@ -4,9 +4,10 @@ import { ThemePalette } from '@angular/material/core';
 import { Color } from 'projects/color-picker/src/public-api';
 
 @Component({
-  selector: 'ngx-mat-demo-colorpicker',
-  templateUrl: './demo-colorpicker.component.html',
-  styleUrls: ['./demo-colorpicker.component.scss']
+    selector: 'ngx-mat-demo-colorpicker',
+    templateUrl: './demo-colorpicker.component.html',
+    styleUrls: ['./demo-colorpicker.component.scss'],
+    standalone: false
 })
 export class DemoColorpickerComponent implements OnInit {
 

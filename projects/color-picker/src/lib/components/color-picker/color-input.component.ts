@@ -39,22 +39,23 @@ export const MAT_COLORPICKER_VALIDATORS: any = {
 };
 
 @Directive({
-  selector: 'input[ngxMatColorPicker]',
-  providers: [
-    MAT_COLORPICKER_VALUE_ACCESSOR,
-    MAT_COLORPICKER_VALIDATORS,
-    { provide: MAT_INPUT_VALUE_ACCESSOR, useExisting: NgxMatColorPickerInput },
-  ],
-  host: {
-    '[attr.aria-haspopup]': '_picker ? "dialog" : null',
-    '[attr.aria-owns]': '(_picker?.opened && _picker.id) || null',
-    '[disabled]': 'disabled',
-    '(input)': '_onInput($event.target.value)',
-    '(change)': '_onChange()',
-    '(blur)': '_onBlur()',
-    '(keydown)': '_onKeydown($event)',
-  },
-  exportAs: 'ngxMatColorPickerInput',
+    selector: 'input[ngxMatColorPicker]',
+    providers: [
+        MAT_COLORPICKER_VALUE_ACCESSOR,
+        MAT_COLORPICKER_VALIDATORS,
+        { provide: MAT_INPUT_VALUE_ACCESSOR, useExisting: NgxMatColorPickerInput },
+    ],
+    host: {
+        '[attr.aria-haspopup]': '_picker ? "dialog" : null',
+        '[attr.aria-owns]': '(_picker?.opened && _picker.id) || null',
+        '[disabled]': 'disabled',
+        '(input)': '_onInput($event.target.value)',
+        '(change)': '_onChange()',
+        '(blur)': '_onBlur()',
+        '(keydown)': '_onKeydown($event)',
+    },
+    exportAs: 'ngxMatColorPickerInput',
+    standalone: false
 })
 export class NgxMatColorPickerInput implements ControlValueAccessor, OnInit, OnDestroy, Validator {
 
