@@ -32,11 +32,11 @@
       "@angular-material-components/color-picker/*": [
         "dist/@angular-material-components/color-picker/*"
       ],
-      "@4sellers/angular-material-components-datetime-picker": [
-        "dist/@4sellers/angular-material-components-datetime-picker"
+      "@salesware/angular-material-components-datetime-picker": [
+        "dist/@salesware/angular-material-components-datetime-picker"
       ],
-      "@4sellers/angular-material-components-datetime-picker/*": [
-        "dist/@4sellers/angular-material-components-datetime-picker/*"
+      "@salesware/angular-material-components-datetime-picker/*": [
+        "dist/@salesware/angular-material-components-datetime-picker/*"
       ],
       "file-input": [
         "dist/file-input"
