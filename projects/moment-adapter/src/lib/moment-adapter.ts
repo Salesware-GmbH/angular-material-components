@@ -9,7 +9,7 @@ import { MAT_DATE_LOCALE } from '@angular/material/core';
 // TODO(mmalerba): See if we can clean this up at some point.
 // tslint:disable-next-line:no-duplicate-imports
 import { default as _rollupMoment, Moment, MomentFormatSpecification, MomentInput } from 'moment';
-import { NgxMatDateAdapter } from '@4sellers/angular-material-components-datetime-picker';
+import { NgxMatDateAdapter } from '@salesware/angular-material-components-datetime-picker';
 import moment from 'moment';
 
 
