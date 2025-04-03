@@ -4,8 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build:datetime-picker": "ng build NgxMatDatetimePicker",
-    "build:moment-adapter": "ng build NgxMatMomentAdapter"
+    "build": "ng build NgxMatDatetimePicker && ng build NgxMatMomentAdapter",
+    "publish": "npm publish --access=public dist/@salesware/angular-material-components-datetime-picker/ && npm publish --access=public dist/@salesware/angular-material-components-moment-adapter/"
   },
   "dependencies": {
     "@angular/animations": "~19.1.3",
