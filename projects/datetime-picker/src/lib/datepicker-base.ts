@@ -445,6 +445,8 @@ export abstract class NgxMatDatepickerBase<
   }
   private _restoreFocus = true;
 
+  @Input() showWeekNumbers = false;
+
   /**
    * Emits selected year in multiyear view.
    * This doesn't imply a change on the selected date.

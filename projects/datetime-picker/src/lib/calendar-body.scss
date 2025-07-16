@@ -56,7 +56,12 @@ $calendar-range-end-body-cell-size:
   display: none;
 }
 
-.mat-calendar-body-cell-container {
+.mat-calendar-body-week-number {
+  text-align: center;
+}
+
+.mat-calendar-body-cell-container,
+.mat-calendar-body-week-number {
   position: relative;
   height: 0;
   line-height: 0;

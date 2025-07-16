@@ -38,6 +38,7 @@ export class NgxMatCalendarCell<D = any> {
     public cssClasses: NgxMatCalendarCellCssClasses = {},
     public compareValue = value,
     public rawValue?: D,
+    public isWeekNumber?: boolean,
   ) {}
 }
 
@@ -98,6 +99,8 @@ export class NgxMatCalendarBody<D = any> implements OnChanges, OnDestroy, AfterV
 
   /** The cell number of the active cell in the table. */
   @Input() activeCell: number = 0;
+
+  @Input() hideLabel = false;
 
   ngAfterViewChecked() {
     if (this._focusActiveCellAfterViewChecked) {
