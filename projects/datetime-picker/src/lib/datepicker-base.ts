@@ -21,7 +21,7 @@ import {
 } from '@angular/cdk/overlay';
 import { _getFocusedElementPierceShadowDom } from '@angular/cdk/platform';
 import { ComponentPortal, ComponentType, TemplatePortal } from '@angular/cdk/portal';
-import { DOCUMENT } from '@angular/common';
+
 import {
   AfterViewInit,
   ChangeDetectionStrategy,
@@ -45,6 +45,7 @@ import {
   ViewContainerRef,
   ViewEncapsulation,
   inject,
+  DOCUMENT
 } from '@angular/core';
 import { ThemePalette } from '@angular/material/core';
 import { Observable, Subject, Subscription, merge } from 'rxjs';
