@@ -295,6 +295,10 @@ export class NgxMatNativeDateAdapter extends NgxMatDateAdapter<Date> {
     date.setSeconds(value);
   }
 
+  getIsoWeek(date: Date): number {
+    return 0;
+  }
+
   /** Creates a date but allows the month and date to overflow. */
   private _createDateWithOverflow(year: number, month: number, date: number) {
     const result = new Date(year, month, date);

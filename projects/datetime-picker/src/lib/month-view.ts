@@ -144,6 +144,8 @@ export class NgxMatMonthView<D> implements AfterContentInit, OnChanges, OnDestro
   /** Origin of active drag, or null when dragging is not active. */
   @Input() activeDrag: NgxMatCalendarUserEvent<D> | null = null;
 
+  @Input() showWeekNumbers = false;
+
   /** Emits when a new date is selected. */
   @Output() readonly selectedChange: EventEmitter<D | null> = new EventEmitter<D | null>();
 
@@ -520,6 +522,14 @@ export class NgxMatMonthView<D> implements AfterContentInit, OnChanges, OnDestro
         this._dateAdapter.getMonth(this.activeDate),
         i + 1,
       );
+
+      if (this.showWeekNumbers && (cell === 0 || i === 0)) {
+        const weekNumber = this._dateAdapter.getIsoWeek(date);
+        this._weeks[this._weeks.length - 1].push(
+          new NgxMatCalendarCell<D>(weekNumber, `${weekNumber}`, '', false, null, null, null, true)
+        );
+      }
+
       const enabled = this._shouldEnableDate(date);
       const ariaLabel = this._dateAdapter.format(date, this._dateFormats.display.dateA11yLabel);
       const cellClasses = this.dateClass ? this.dateClass(date, 'month') : undefined;

@@ -261,6 +261,10 @@ export class NgxMatMomentAdapter extends NgxMatDateAdapter<Moment> {
     date.seconds(value);
   }
 
+  getIsoWeek(date: Moment): number {
+    return this.clone(date).isoWeek();
+  }
+
   /** Creates a Moment instance while respecting the current UTC settings. */
   private _createMoment(
     date?: MomentInput,

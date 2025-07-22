@@ -10,6 +10,7 @@
     [selected]="_getSelected()" [dateClass]="datepicker.dateClass" [comparisonStart]="comparisonStart"
     [comparisonEnd]="comparisonEnd" [@fadeInCalendar]="'enter'" [startDateAccessibleName]="startDateAccessibleName"
     [endDateAccessibleName]="endDateAccessibleName" (yearSelected)="datepicker._selectYear($event)"
+    [showWeekNumbers]="datepicker.showWeekNumbers"
     (monthSelected)="datepicker._selectMonth($event)" (viewChanged)="datepicker._viewChanged($event)"
     (_userSelection)="_handleUserSelection($event)" (_userDragDrop)="_handleUserDragDrop($event)"></ngx-mat-calendar>
 
