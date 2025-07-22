@@ -43,6 +43,8 @@ export abstract class NgxMatDateAdapter<D> extends DateAdapter<D> {
    */
   abstract setSecond(date: D, value: number): void;
 
+  abstract getIsoWeek(date: D): number;
+
   /**
    * Check if two date have same time
    * @param a Date 1

@@ -311,6 +311,8 @@ export class NgxMatCalendar<D> implements AfterContentInit, AfterViewChecked, On
   /** ARIA Accessible name of the `<input matEndDate/>` */
   @Input() endDateAccessibleName: string | null;
 
+  @Input() showWeekNumbers = false;
+
   /** Emits when the currently selected date changes. */
   @Output() readonly selectedChange: EventEmitter<D | null> = new EventEmitter<D | null>();
 
