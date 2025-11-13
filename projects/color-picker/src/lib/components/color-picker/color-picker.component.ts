@@ -3,8 +3,8 @@ import { coerceBooleanProperty } from '@angular/cdk/coercion';
 import { ESCAPE, UP_ARROW } from '@angular/cdk/keycodes';
 import { Overlay, OverlayConfig, OverlayRef, PositionStrategy, ScrollStrategy } from '@angular/cdk/overlay';
 import { ComponentPortal } from '@angular/cdk/portal';
-import { DOCUMENT } from '@angular/common';
-import { ChangeDetectionStrategy, Component, ComponentRef, ElementRef, EventEmitter, Inject, InjectionToken, Input, NgZone, OnDestroy, OnInit, Optional, Output, ViewChild, ViewContainerRef, ViewEncapsulation } from '@angular/core';
+
+import { ChangeDetectionStrategy, Component, ComponentRef, ElementRef, EventEmitter, Inject, InjectionToken, Input, NgZone, OnDestroy, OnInit, Optional, Output, ViewChild, ViewContainerRef, ViewEncapsulation, DOCUMENT } from '@angular/core';
 import { CanColor, ThemePalette, mixinColor } from '@angular/material/core';
 import { matDatepickerAnimations } from '@angular/material/datepicker';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
