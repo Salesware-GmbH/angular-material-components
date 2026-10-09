@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { ThemePalette } from '@angular/material/core';
 import { FormControl, Validators } from '@angular/forms';
 import { AcceptValidator, MaxSizeValidator } from '../../../projects/file-input/src';
@@ -10,6 +10,7 @@ const presetFile = new File([], "file 1");
     selector: 'app-demo-fileinput',
     templateUrl: './demo-fileinput.component.html',
     styleUrls: ['./demo-fileinput.component.scss'],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class DemoFileInputComponent implements OnInit {

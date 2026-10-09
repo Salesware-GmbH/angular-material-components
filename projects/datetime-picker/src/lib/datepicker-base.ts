@@ -1,4 +1,3 @@
-import { AnimationEvent } from '@angular/animations';
 import { ListKeyManagerModifierKey } from '@angular/cdk/a11y';
 import { Directionality } from '@angular/cdk/bidi';
 import { BooleanInput, coerceBooleanProperty, coerceStringArray } from '@angular/cdk/coercion';
@@ -62,7 +61,6 @@ import {
   NgxExtractDateTypeFromSelection,
   NgxMatDateSelectionModel,
 } from './date-selection-model';
-import { ngxMatDatepickerAnimations } from './datepicker-animations';
 import { createMissingDateImplError } from './datepicker-errors';
 import { NgxDateFilterFn } from './datepicker-input-base';
 import { NgxMatDatepickerIntl } from './datepicker-intl';
@@ -107,13 +105,9 @@ export const NGX_MAT_DATEPICKER_SCROLL_STRATEGY_FACTORY_PROVIDER = {
     styleUrls: ['datepicker-content.scss'],
     host: {
         'class': 'mat-datepicker-content',
-        '[@transformPanel]': '_animationState',
-        '(@transformPanel.start)': '_handleAnimationEvent($event)',
-        '(@transformPanel.done)': '_handleAnimationEvent($event)',
         '[class.mat-datepicker-content-touch]': 'datepicker.touchUi',
         '[class.mat-datepicker-content-touch-with-time]': '!datepicker.hideTime',
     },
-    animations: [ngxMatDatepickerAnimations.transformPanel, ngxMatDatepickerAnimations.fadeInCalendar],
     exportAs: 'ngxMatDatepickerContent',
     encapsulation: ViewEncapsulation.None,
     changeDetection: ChangeDetectionStrategy.OnPush,
@@ -263,14 +257,6 @@ export class NgxMatDatepickerContent<S, D = NgxExtractDateTypeFromSelection<S>>
   _startExitAnimation() {
     this._animationState = 'void';
     this._changeDetectorRef.markForCheck();
-  }
-
-  _handleAnimationEvent(event: AnimationEvent) {
-    this._isAnimating = event.phaseName === 'start';
-
-    if (!this._isAnimating) {
-      this._animationDone.next();
-    }
   }
 
   _getSelected() {

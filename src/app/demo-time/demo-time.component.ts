@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { ThemePalette } from '@angular/material/core';
 
 @Component({
     selector: 'app-demo-time',
     templateUrl: './demo-time.component.html',
     styleUrls: ['./demo-time.component.scss'],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class DemoTimeComponent implements OnInit {

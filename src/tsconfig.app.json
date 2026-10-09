@@ -17,5 +17,8 @@
   "include": [
     "src/**/*.d.ts",
     "projects/datetime-picker/src/**/*.d.ts",
-  ]
+  ],
+  "angularCompilerOptions": {
+    "strictTemplates": false
+  }
 }

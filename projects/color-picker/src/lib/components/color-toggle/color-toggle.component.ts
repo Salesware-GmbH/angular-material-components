@@ -1,6 +1,7 @@
 import {
   AfterContentInit, ChangeDetectorRef, Component, ContentChild, Directive, Input, OnChanges, OnDestroy,
-  OnInit, SimpleChanges, ViewChild, ViewEncapsulation
+  OnInit, SimpleChanges, ViewChild, ViewEncapsulation,
+  ChangeDetectionStrategy
 } from '@angular/core';
 import { MatButton } from '@angular/material/button';
 import { Subscription, merge, of } from 'rxjs';
@@ -28,6 +29,7 @@ export class NgxMatColorpickerToggleIcon { }
     },
     exportAs: 'ngxMatColorPickerToggle',
     encapsulation: ViewEncapsulation.None,
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class NgxMatColorToggleComponent implements OnInit, AfterContentInit, OnChanges, OnDestroy {

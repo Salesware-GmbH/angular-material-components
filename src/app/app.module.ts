@@ -1,4 +1,4 @@
-import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi, withXhr } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -68,6 +68,6 @@ export class AppRoutingModule { }
         MatListModule,
         MatCardModule
     ],
-    providers: [provideHttpClient(withInterceptorsFromDi())]
+    providers: [provideHttpClient(withXhr(), withInterceptorsFromDi())]
 })
 export class AppModule { }

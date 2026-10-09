@@ -1,6 +1,6 @@
 import { coerceBooleanProperty } from '@angular/cdk/coercion';
 import { Platform } from '@angular/cdk/platform';
-import { ChangeDetectorRef, Component, ContentChild, Directive, DoCheck, ElementRef, forwardRef, Input, OnDestroy, Optional, Self, ViewChild, ViewEncapsulation } from '@angular/core';
+import { ChangeDetectorRef, Component, ContentChild, Directive, DoCheck, ElementRef, forwardRef, Input, OnDestroy, Optional, Self, ViewChild, ViewEncapsulation, ChangeDetectionStrategy } from '@angular/core';
 import { ControlValueAccessor, FormGroupDirective, NgControl, NgForm } from '@angular/forms';
 import { CanUpdateErrorState, ErrorStateMatcher, mixinErrorState, ThemePalette } from '@angular/material/core';
 import { MatFormFieldControl } from '@angular/material/form-field';
@@ -42,6 +42,7 @@ export class NgxMatFileInputIcon { }
         { provide: MatFormFieldControl, useExisting: forwardRef(() => NgxMatFileInputComponent) }
     ],
     exportAs: 'ngx-mat-file-input',
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class NgxMatFileInputComponent extends _NgxMatInputMixinBase implements MatFormFieldControl<FileOrArrayFile>,

@@ -1,17 +1,17 @@
 {
   "name": "@salesware/angular-material-components-datetime-picker",
-  "version": "21.0.0",
+  "version": "22.0.2",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/Salesware-GmbH/angular-material-components.git"
   },
   "peerDependencies": {
-    "@angular/platform-browser": "^21.1.2",
-    "@angular/common": "^21.1.2",
-    "@angular/core": "^21.1.2",
-    "@angular/forms": "^21.1.2",
-    "@angular/material": "^21.1.2",
-    "@angular/cdk": "^21.1.2"
+    "@angular/platform-browser": "^22.0.0",
+    "@angular/common": "^22.0.0",
+    "@angular/core": "^22.0.0",
+    "@angular/forms": "^22.0.0",
+    "@angular/material": "^22.0.0",
+    "@angular/cdk": "^22.0.0"
   }
 }

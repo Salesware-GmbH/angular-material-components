@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter, NgZone } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, NgZone, ChangeDetectionStrategy } from '@angular/core';
 import { Color } from '../../../models';
 import { getColorAtPosition } from '../../../helpers';
 import { NgxMatBaseColorCanvas } from '../base-color-canvas';
@@ -7,6 +7,7 @@ import { NgxMatBaseColorCanvas } from '../base-color-canvas';
     selector: 'ngx-mat-color-slider',
     templateUrl: './color-slider.component.html',
     styleUrls: ['./color-slider.component.scss'],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class NgxMatColorSliderComponent extends NgxMatBaseColorCanvas implements OnInit {

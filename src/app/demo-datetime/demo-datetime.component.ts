@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, ChangeDetectionStrategy } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { ThemePalette } from '@angular/material/core';
 
@@ -6,6 +6,7 @@ import { ThemePalette } from '@angular/material/core';
     selector: 'app-demo-datetime',
     templateUrl: './demo-datetime.component.html',
     styleUrls: ['./demo-datetime.component.scss'],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class DemoDatetimeComponent implements OnInit {

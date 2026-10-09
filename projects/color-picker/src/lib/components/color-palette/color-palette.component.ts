@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation, Output, EventEmitter, Input } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, Output, EventEmitter, Input, ChangeDetectionStrategy } from '@angular/core';
 import { Color } from '../../models';
 import { ThemePalette } from '@angular/material/core';
 
@@ -10,6 +10,7 @@ import { ThemePalette } from '@angular/material/core';
     host: {
         'class': 'ngx-mat-color-palette'
     },
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class NgxMatColorPaletteComponent implements OnInit {

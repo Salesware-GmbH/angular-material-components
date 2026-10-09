@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { AbstractControl, FormControl, Validators } from '@angular/forms';
 import { ThemePalette } from '@angular/material/core';
 import { Color } from 'projects/color-picker/src/public-api';
@@ -7,6 +7,7 @@ import { Color } from 'projects/color-picker/src/public-api';
     selector: 'ngx-mat-demo-colorpicker',
     templateUrl: './demo-colorpicker.component.html',
     styleUrls: ['./demo-colorpicker.component.scss'],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class DemoColorpickerComponent implements OnInit {

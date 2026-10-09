@@ -6,21 +6,33 @@
           <td>
             <button type="button" mat-icon-button aria-label="expand_less icon" (click)="change('hour', true)"
               [disabled]="disabled">
-              <mat-icon>expand_less</mat-icon>
+              @if (arrowUpIconTemplate) {
+                <ng-container *ngTemplateOutlet="arrowUpIconTemplate"></ng-container>
+              } @else {
+                <mat-icon>expand_less</mat-icon>
+              }
             </button>
           </td>
           <td></td>
           <td>
             <button type="button" mat-icon-button aria-label="expand_less icon" (click)="change('minute', true)"
               [disabled]="disabled || disableMinute">
-              <mat-icon>expand_less</mat-icon>
+              @if (arrowUpIconTemplate) {
+                <ng-container *ngTemplateOutlet="arrowUpIconTemplate"></ng-container>
+              } @else {
+                <mat-icon>expand_less</mat-icon>
+              }
             </button> </td>
             <td></td>
             @if (showSeconds) {
               <td>
                 <button type="button" mat-icon-button aria-label="expand_less icon" (click)="change('second', true)"
                   [disabled]="disabled || disableMinute">
-                  <mat-icon>expand_less</mat-icon>
+                  @if (arrowUpIconTemplate) {
+                    <ng-container *ngTemplateOutlet="arrowUpIconTemplate"></ng-container>
+                  } @else {
+                    <mat-icon>expand_less</mat-icon>
+                  }
                 </button>
               </td>
             }
@@ -79,13 +91,21 @@
                   <td>
                     <button type="button" mat-icon-button aria-label="expand_more icon" (click)="change('hour', false)"
                       [disabled]="disabled">
-                      <mat-icon>expand_more</mat-icon>
+                      @if (arrowDownIconTemplate) {
+                        <ng-container *ngTemplateOutlet="arrowDownIconTemplate"></ng-container>
+                      } @else {
+                        <mat-icon>expand_more</mat-icon>
+                      }
                     </button> </td>
                     <td></td>
                     <td>
                       <button type="button" mat-icon-button aria-label="expand_more icon" (click)="change('minute', false)"
                         [disabled]="disabled || disableMinute">
-                        <mat-icon>expand_more</mat-icon>
+                        @if (arrowDownIconTemplate) {
+                          <ng-container *ngTemplateOutlet="arrowDownIconTemplate"></ng-container>
+                        } @else {
+                          <mat-icon>expand_more</mat-icon>
+                        }
                       </button> </td>
                       @if (showSeconds) {
                         <td></td>
@@ -94,7 +114,11 @@
                         <td>
                           <button type="button" mat-icon-button aria-label="expand_more icon" (click)="change('second', false)"
                             [disabled]="disabled || disableMinute">
-                            <mat-icon>expand_more</mat-icon>
+                            @if (arrowDownIconTemplate) {
+                              <ng-container *ngTemplateOutlet="arrowDownIconTemplate"></ng-container>
+                            } @else {
+                              <mat-icon>expand_more</mat-icon>
+                            }
                           </button>
                         </td>
                       }

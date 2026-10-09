@@ -1,14 +1,14 @@
 {
   "name": "@salesware/angular-material-components-moment-adapter",
-  "version": "21.0.0",
+  "version": "22.0.1",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/Salesware-GmbH/angular-material-components.git"
   },
   "peerDependencies": {
-    "@angular/common": "^21.1.2",
-    "@angular/core": "^21.1.2",
+    "@angular/common": "^22.0.0",
+    "@angular/core": "^22.0.0",
     "moment": "^2.18.1"
   }
 }

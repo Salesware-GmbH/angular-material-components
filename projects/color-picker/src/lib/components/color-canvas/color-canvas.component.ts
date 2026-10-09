@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, NgZone, OnChanges, OnDestroy, OnInit, SimpleChanges, ViewEncapsulation } from '@angular/core';
+import { AfterViewInit, Component, NgZone, OnChanges, OnDestroy, OnInit, SimpleChanges, ViewEncapsulation, ChangeDetectionStrategy } from '@angular/core';
 import { AbstractControl, FormControl, FormGroup, Validators } from '@angular/forms';
 import { merge } from 'rxjs';
 import { debounceTime, distinctUntilChanged, takeUntil } from 'rxjs/operators';
@@ -16,6 +16,7 @@ const RADIUS_NOB = 5;
     host: {
         'class': 'ngx-mat-color-canvas'
     },
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class NgxMatColorCanvasComponent extends NgxMatBaseColorCanvas

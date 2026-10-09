@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output, ViewEncapsulation, Input } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output, ViewEncapsulation, Input, ChangeDetectionStrategy } from '@angular/core';
 import { Color } from '../../models';
 import { BASIC_COLORS, stringInputToObject } from '../../helpers';
 
@@ -10,6 +10,7 @@ import { BASIC_COLORS, stringInputToObject } from '../../helpers';
     host: {
         'class': 'ngx-mat-color-collection'
     },
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class NgxMatColorCollectionComponent implements OnInit {
