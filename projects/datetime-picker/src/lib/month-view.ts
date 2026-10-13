@@ -50,6 +50,8 @@ import { createMissingDateImplError } from './datepicker-errors';
 
 const DAYS_PER_WEEK = 7;
 
+let uniqueIdCounter = 0;
+
 /**
  * An internal component used to display a single month in the datepicker.
  * @docs-private
@@ -202,7 +204,7 @@ export class NgxMatMonthView<D> implements AfterContentInit, OnChanges, OnDestro
   _todayDate: number | null;
 
   /** The names of the weekdays. */
-  _weekdays: { long: string; narrow: string }[];
+  _weekdays: { long: string; narrow: string; id: number }[];
 
   constructor(
     readonly _changeDetectorRef: ChangeDetectorRef,
@@ -502,7 +504,7 @@ export class NgxMatMonthView<D> implements AfterContentInit, OnChanges, OnDestro
 
     // Rotate the labels for days of the week based on the configured first day of the week.
     let weekdays = longWeekdays.map((long, i) => {
-      return { long, narrow: narrowWeekdays[i] };
+      return { long, narrow: narrowWeekdays[i], id: uniqueIdCounter++ };
     });
     this._weekdays = weekdays.slice(firstDayOfWeek).concat(weekdays.slice(0, firstDayOfWeek));
   }

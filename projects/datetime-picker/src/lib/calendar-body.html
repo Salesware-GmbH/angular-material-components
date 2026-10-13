@@ -16,7 +16,7 @@ aria-hidden because we don't want it to be read out as one of the weeks in the m
 }
 
 <!-- Create the first row separately so we can include a special spacer cell. -->
-@for (row of rows; track row; let rowIndex = $index) {
+@for (row of rows; track _trackRow(row); let rowIndex = $index) {
   <tr role="row">
     @if (row[0].isWeekNumber) {
       <th
@@ -48,7 +48,7 @@ aria-hidden because we don't want it to be read out as one of the weeks in the m
     cell is interactable, as well as the selection state via `aria-pressed`. See #23476 for
     background.
     -->
-    @for (item of row; track item; let colIndex = $index) {
+    @for (item of row; track item.id; let colIndex = $index) {
       @if (!item.isWeekNumber) {
         <td
           role="gridcell"
