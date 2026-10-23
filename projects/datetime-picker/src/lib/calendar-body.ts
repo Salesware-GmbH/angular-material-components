@@ -25,11 +25,15 @@ export type NgxMatCalendarCellClassFunction<D> = (
   view: 'month' | 'year' | 'multi-year',
 ) => NgxMatCalendarCellCssClasses;
 
+let uniqueIdCounter = 0;
+
 /**
  * An internal class that represents the data corresponding to a single calendar cell.
  * @docs-private
  */
 export class NgxMatCalendarCell<D = any> {
+  readonly id = uniqueIdCounter++;
+
   constructor(
     public value: number,
     public displayValue: string,
@@ -162,6 +166,13 @@ export class NgxMatCalendarBody<D = any> implements OnChanges, OnDestroy, AfterV
   _cellWidth: string;
 
   private _didDragSinceMouseDown = false;
+
+  /**
+   * Tracking function for rows based on their identity. Ideally we would use some sort of
+   * key on the row, but that would require a breaking change for the `rows` input. We don't
+   * use the built-in identity tracking, because it logs warnings.
+   */
+  _trackRow = (row: NgxMatCalendarCell[]) => row;
 
   constructor(private _elementRef: ElementRef<HTMLElement>, private _ngZone: NgZone) {
     _ngZone.runOutsideAngular(() => {

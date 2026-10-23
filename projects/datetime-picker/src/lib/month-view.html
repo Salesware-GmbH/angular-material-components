@@ -6,7 +6,7 @@
       @if (showWeekNumbers) {
         <th></th>
       }
-      @for (day of _weekdays; track day) {
+      @for (day of _weekdays; track day.id) {
         <th scope="col">
           <span class="cdk-visually-hidden">{{day.long}}</span>
           <span aria-hidden="true">{{day.narrow}}</span>
