@@ -251,7 +251,9 @@ export class NgxMatCalendarBody<D = any> implements OnChanges, OnDestroy, AfterV
 
   /** Returns whether a cell is active. */
   _isActiveCell(rowIndex: number, colIndex: number): boolean {
-    let cellNumber = rowIndex * this.numCols + colIndex;
+    // The week number is part of the row and counted in `numCols`, but it is not a cell of `activeCell`.
+    const weekNumberCols = this.rows[rowIndex]?.[0]?.isWeekNumber ? 1 : 0;
+    let cellNumber = rowIndex * (this.numCols - weekNumberCols) + colIndex - weekNumberCols;
 
     // Account for the fact that the first row may not have as many cells.
     if (rowIndex) {
